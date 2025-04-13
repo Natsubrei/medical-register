@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+option java_package = "grpc.service";
+option java_multiple_files = true;
+
+// 定义 Appointment 消息体
+message AppointmentMessage {
+  int32 id = 1;
+  string patientName = 2;
+  string doctorName = 3;
+  string department = 4;
+  string bookingDate = 5;
+  string bookingTime = 6;
+}
+
+// 请求与响应消息定义
+message BookAppointmentRequest {
+  AppointmentMessage message = 1;
+}
+message BookAppointmentResponse {
+  bool success = 1;
+}
+
+message QueryByIdRequest {
+  int32 appointmentId = 1;
+}
+message QueryByIdResponse {
+  AppointmentMessage message = 1;
+}
+
+message QueryByPatientRequest {
+  string patientName = 1;
+}
+message QueryByPatientResponse {
+  repeated AppointmentMessage messages = 1;
+}
+
+message CancelAppointmentRequest {
+  int32 appointmentId = 1;
+}
+message CancelAppointmentResponse {
+  bool success = 1;
+}
+
+// 定义服务接口
+service AppointmentService {
+  rpc BookAppointment(BookAppointmentRequest) returns (BookAppointmentResponse);
+  rpc QueryById(QueryByIdRequest) returns (QueryByIdResponse);
+  rpc QueryByPatient(QueryByPatientRequest) returns (QueryByPatientResponse);
+  rpc CancelAppointment(CancelAppointmentRequest) returns (CancelAppointmentResponse);
+}
