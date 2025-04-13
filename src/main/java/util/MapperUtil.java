@@ -22,11 +22,11 @@ public class MapperUtil {
         }
     }
 
-    public static <T> T getMapper(Class<T> clazz, SqlSession session) {
-        return session.getMapper(clazz);
-    }
-
     public static SqlSession openSession() {
         return sqlSessionFactory.openSession();
+    }
+
+    public static <T> T getMapper(Class<T> clazz, SqlSession session) {
+        return session.getMapper(clazz);
     }
 }

@@ -1,9 +1,7 @@
 package entity;
 
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.sql.Date;
@@ -18,7 +16,7 @@ public class Appointment implements Serializable {
     /**
      * 预约id
      */
-    private Long id;
+    private Integer id;
 
     /**
      * 患者姓名
