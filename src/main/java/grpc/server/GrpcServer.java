@@ -13,7 +13,7 @@ public class GrpcServer {
                 .build()
                 .start();
 
-        System.out.println("🚀 GRPC Server started on port " + PORT);
+        System.out.println("🚀 gRPC Server started on port " + PORT);
 
         // 阻塞当前线程，直到服务器终止
         server.awaitTermination();
