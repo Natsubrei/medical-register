@@ -1,9 +1,9 @@
 package grpc.server;
 
 import grpc.service.*;
-import entity.Appointment;
+import dao.Appointment;
 import io.grpc.stub.StreamObserver;
-import mapper.AppointmentMapper;
+import dao.AppointmentMapper;
 import org.apache.ibatis.session.SqlSession;
 import util.MapperUtil;
 import util.TypeUtil;

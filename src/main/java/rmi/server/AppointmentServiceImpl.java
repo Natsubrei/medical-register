@@ -1,7 +1,7 @@
 package rmi.server;
 
-import entity.Appointment;
-import mapper.AppointmentMapper;
+import dao.Appointment;
+import dao.AppointmentMapper;
 import org.apache.ibatis.session.SqlSession;
 import rmi.service.AppointmentService;
 import util.MapperUtil;

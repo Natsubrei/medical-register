@@ -1,6 +1,6 @@
 package rmi.service;
 
-import entity.Appointment;
+import dao.Appointment;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;

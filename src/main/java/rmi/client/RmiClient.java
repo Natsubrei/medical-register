@@ -1,7 +1,7 @@
 package rmi.client;
 
 import com.mysql.cj.util.StringUtils;
-import entity.Appointment;
+import dao.Appointment;
 import rmi.service.AppointmentService;
 import util.ConstantUtil;
 

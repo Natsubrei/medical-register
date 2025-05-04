@@ -1,6 +1,6 @@
 package util;
 
-import entity.Appointment;
+import dao.Appointment;
 import grpc.service.AppointmentMessage;
 
 import java.sql.Date;
